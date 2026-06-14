@@ -1,11 +1,10 @@
-name: 夸克自动签到保活
+name: Quark签到
 
 on:
-  workflow_dispatch:
   schedule:
-    # 每天北京时间 09:13 和 18:13 自动触发 (UTC 1:13 和 10:13)
-    - cron: '0 1,8 * * *'
-
+    - cron: '0 1 * * *'   # 北京时间 09:00 (UTC+8 -> UTC+1)
+    - cron: '0 10 * * *'   # 北京时间 13:00 (UTC+8 -> UTC+5)
+  workflow_dispatch:      # 允许手动触发
 
 jobs:
   sign-in:
