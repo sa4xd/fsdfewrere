@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # 每天北京时间 09:13 和 18:13 自动触发 (UTC 1:13 和 10:13)
-    - cron: '1 1,6 * * *'
+    - cron: '0 1,8 * * *'
 
 
 jobs:
